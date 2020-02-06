@@ -29,16 +29,15 @@ def getMaxScore():
     return max
 def getList():
     list1 = []
-    for i in range(1, 54):
+    for i in range(1, 52):
         list2 = []
         list2.append(dataNPND[i][0])
         list2.append(getScore(i))
-    list1.append(list2)
+        list1.append(list2)
     list1.sort(key=lambda x:x[1], reverse=True)
-    print "The top 10 worst States for animal testing are listed below"
-    for r in range(1, 10):
-        print list2[r][1]
+    print "The States in order from worst for animal testing to least are listed below"
+    for r in range(0, 51):
+        print list1[r][0]
 
-
-
+getList()
 
